@@ -3,6 +3,7 @@
 // соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
+Console.Clear();
 
 int[]NewArr(int size, int num, int num1)
 {
@@ -21,7 +22,7 @@ void PrintArr(int[]arr)
     for (int i = 0; i <arr. Length; i++)
     {
      if(arr[i]<arr.Length-1) Console.Write( $"{arr[i]}, ");
-     else Console.WriteLine( $"{arr[i]}");
+     else Console.Write( $"{arr[i]}");
     }
     Console.WriteLine("]");
 }
@@ -34,7 +35,7 @@ int[]ReplaceNum(int[] arr)
    return arr;
 }
 
-int[]newArr=NewArr(10,-5,10) ;
+int[]newArr=NewArr(12,-10,10) ;
 PrintArr(newArr );
 
 int[]replaceNum=ReplaceNum(newArr);
