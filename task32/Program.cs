@@ -26,18 +26,18 @@ void PrintArr(int[]arr)
     }
     Console.WriteLine("]");
 }
-int[]ReplaceNum(int[] arr)
+     void ReplaceNum(int[] arr)     //  метод   void , потому что мы не создаем массив а переделываем    
 {
     for (int i = 0; i <arr.Length; i++)
     {
       arr[i]=arr[i]* -1;
     }
-   return arr;
+
 }
 
 int[]newArr=NewArr(12,-10,10) ;
 PrintArr(newArr );
 
-int[]replaceNum=ReplaceNum(newArr);
+ReplaceNum(newArr);
 
-PrintArr( replaceNum);
+PrintArr(newArr);
