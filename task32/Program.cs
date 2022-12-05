@@ -33,6 +33,7 @@ void PrintArr(int[]arr)
       arr[i]=arr[i]* -1;
     }
 
+
 }
 
 int[]newArr=NewArr(12,-10,10) ;
