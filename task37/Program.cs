@@ -36,7 +36,7 @@ int[] MuitArr(int[]arr)
  {
     numArr[i]=arr[i]*arr[arr.Length-1-i];
  }
- if(arr.Length%2==1) numArr[size-1]=arr[size-1];
+ if(arr.Length%2==1) numArr[size-1]=arr[size-1]; // или if(arr.Length%2==1) numArr[size-1]=arr[arr.Length/2]; 
  
   return numArr;
 }
