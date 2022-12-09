@@ -36,11 +36,10 @@ bool FindNum(int[]arr,int find)
   }
   return false;
 }
-int[]array=CreateArr(9,-10,12);
-bool resalt= FindNum(array,x);
 
-PrintArray(array);
+int[]createArr=CreateArr(10, 0, 15);
+PrintArray(createArr);
 
+bool resalt= FindNum(createArr,x);
 Console.Write($"{x}");
-
 Console.WriteLine (resalt ?"->Да":" ->Нет");
