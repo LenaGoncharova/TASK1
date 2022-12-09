@@ -3,19 +3,6 @@
 // Результат запишите в новом массиве.
 
 
-// int[] MultiplicationElm(int[] arr)
-// {
-// int size = arr.Length / 2;
-// if (arr.Length % 2 == 1) size += 1;
-// int[] newArr = new int[size];
-// for (int i = 0; i < size; i++)
-// {
-// newArr[i] = arr[i] * arr[arr.Length - 1 - i];
-// }
-// if (arr.Length % 2 == 1) newArr[size - 1] = arr[size - 1]; 1 2 3 4 5
-// return newArr;
-// }
-
 
 int[]NewArr(int size,int min,int max)
 {
@@ -40,7 +27,7 @@ void PrintArr(int[]arr)
         Console.WriteLine("]");
 }
 
-int[]MuitArr(int[]arr)
+int[] MuitArr(int[]arr)
 {
  int size=arr.Length/2;
  if (arr.Length%2==1)size=size+1;
