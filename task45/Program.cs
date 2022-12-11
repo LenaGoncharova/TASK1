@@ -50,7 +50,7 @@
 
   int [] massive={1,2,3, 4,5};
   PrintArr(massive);
-   massive[0]=55;//  демонстрация того что в скопированном массиве можно менять числа.  
+   
   int[] сopyArray=CopyArray (massive);
-  
+  сopyArray[0]=55;//  демонстрация того что в скопированном массиве можно менять числа.
   PrintArr(сopyArray);
