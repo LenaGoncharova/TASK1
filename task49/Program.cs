@@ -52,3 +52,14 @@ int[,] matrixArr=  MatrixArr( 5,6, 0,10);
  Console.WriteLine();
  QartMatr(matrixArr);
  Print2DArray(matrixArr);
+
+//  варинат 2
+void QartMatr (int[,] arr)
+{
+for (int i = 0; i < arr.GetLength(0); i+=2)
+{
+for (int j = 0; j < arr.GetLength(1); j+=2)
+arr[i, j] *= arr[i, j];
+}
+}
+
