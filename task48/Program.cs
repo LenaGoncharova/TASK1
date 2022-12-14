@@ -6,31 +6,31 @@
 // 1 2 3 4
 // 2 3 4 5
 Console.Clear();
-// int[,]CreateMatrixRndInt(int line, int columns)
-// {
-// int[,] matrix = new int[line, columns];
+int[,]CreateMatrixRndInt(int line, int columns)
+{
+int[,] matrix = new int[line, columns];
 
-// for (int i = 0; i < matrix.GetLength(0); i++)
-// {
-// for (int j = 0; j < matrix.GetLength(1); j++)
-// {
-// matrix[i, j] = j + j;
-// }
-// }
-// return matrix;
-// }
-// void PrintMatrix(int[,] matrix)
-// {
-// for (int i = 0; i < matrix.GetLength(0); i++)
-// {
-// Console.Write("|");
-// for (int j = 0; j < matrix.GetLength(1); j++)
-// {
-// if (matrix[i, j] < 10) Console.Write($"{matrix[i, j],3}");
-// else Console.Write($"{matrix[i, j],3}");
-// }
-// Console.WriteLine("|");
-// }
-// }
-// int[,] array2D = CreateMatrixRndInt(3, 8);
-// PrintMatrix(array2D);
+for (int i = 0; i < matrix.GetLength(0); i++)
+{
+for (int j = 0; j < matrix.GetLength(1); j++)
+{
+matrix[i, j] = j + j;
+}
+}
+return matrix;
+}
+void PrintMatrix(int[,] matrix)
+{
+for (int i = 0; i < matrix.GetLength(0); i++)
+{
+Console.Write("|");
+for (int j = 0; j < matrix.GetLength(1); j++)
+{
+if (matrix[i, j] < 10) Console.Write($"{matrix[i, j],3}");
+else Console.Write($"{matrix[i, j],3}");
+}
+Console.WriteLine("|");
+}
+}
+int[,] array2D = CreateMatrixRndInt(3, 8);
+PrintMatrix(array2D);
