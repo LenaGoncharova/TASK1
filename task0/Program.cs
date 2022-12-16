@@ -1,4 +1,6 @@
-﻿Console.Clear();
+﻿// Задайте двумерный массив из целых чисел. 
+// Найдите среднее арифметическое элементов в каждой строке.
+Console.Clear();
 int[,] MatrixArray(int line, int colums, int min, int max)
 {
     int[,] matrix = new int[line, colums];
@@ -30,20 +32,20 @@ void PrintMatrix(int[,] arr)
 
 double[] MiddleArifmetic(int[,] matrix)
 {
-    int size = matrix.GetLength(1);
+    int size = matrix.GetLength(0);
     double[] result = new double[size];
      int ix= 0;
 
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int j = 0; j < matrix.GetLength(0); j++)
         {
             result[ix] += matrix[i, j];
           
-
+          result[ix] =Math.Round( (result[ix] / matrix.GetLength(0)),2);
+          
 
         }
-    result[ix] =Math.Round( (result[ix] / matrix.GetLength(0)),4);
 
      ix++;
 
