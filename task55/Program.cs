@@ -29,26 +29,49 @@ else Console.Write($"{matrix[i, j],3}");
 Console.WriteLine("|");
 }
 }
-int[,] ReplaceLineColoms( int [,] arr )
+// int[,] ReplaceLineColoms( int [,] arr )
+// {
+//     int[,]replaceArr= new int[arr.GetLength(0),arr.GetLength(1)];
+//  for (int i = 0; i <arr.GetLength(0);i++)  
+//  {
+//    for (int j = 0; j <arr.GetLength(1) ; j++)
+//    {
+
+//      replaceArr[i,j]= arr[j ,i];
+     
+//    }
+     
+//  }
+//    return replaceArr;
+// }
+// Второй метод 
+void ReplaceLineColoms( int [,] arr )
 {
-    int[,]replaceArr= new int[arr.GetLength(0),arr.GetLength(1)];
  for (int i = 0; i <arr.GetLength(0);i++)  
  {
-   for (int j = 0; j <arr.GetLength(1) ; j++)
+   for (int j = i; j <arr.GetLength(1) ; j++)
    {
 
-     replaceArr[i,j]= arr[j ,i];
-     
+     int count=arr[j,i];
+     arr[j,i]=arr[i,j];
+     arr[i,j]=count;
    }
      
  }
-   return replaceArr;
+   
 }
 
 
 
-int[,] array2D = CreateMatrixRndInt(4, 4,1,8);
+int[,] array2D = CreateMatrixRndInt(5, 5,1,8);
 PrintMatrix(array2D);
  Console.WriteLine();
-  int[,] replaceLineColoms =ReplaceLineColoms( array2D );
-PrintMatrix( replaceLineColoms);
+ if  (array2D.GetLength(0)==array2D.GetLength(1))
+ {
+//     int[,] replaceLineColoms =ReplaceLineColoms( array2D );
+//    PrintMatrix( replaceLineColoms);
+//   }
+ReplaceLineColoms(array2D);
+PrintMatrix(array2D);
+ }
+  else Console.WriteLine( "это не квадрат");
